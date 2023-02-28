@@ -13,7 +13,7 @@ public class CalculatorTests {
         //act
         var result = sut.plus.apply(a, b);
         //assert
-        Assertions.assertEquals(result, expected);
+        Assertions.assertEquals(expected, result);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class CalculatorTests {
         //act
         var result = sut.minus.apply(a, b);
         //assert
-        Assertions.assertEquals(result, expected);
+        Assertions.assertEquals(expected, result);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class CalculatorTests {
         //act
         var result = sut.multiply.apply(a, b);
         //assert
-        Assertions.assertEquals(result, expected);
+        Assertions.assertEquals(expected, result);
     }
 
     @Test
@@ -43,17 +43,17 @@ public class CalculatorTests {
         //act
         var result = sut.divide.apply(a, b);
         //assert
-        Assertions.assertEquals(result, expected);
+        Assertions.assertEquals(expected, result);
     }
 
     @Test
     public void testDivideByZero(){
         //arrange
         int a = 24, b = 0;
-        var result = ArithmeticException.class;
+        var expected = ArithmeticException.class;
         //act
-        Executable expected = ()->sut.divide.apply(a, b);
+        Executable result = ()->sut.divide.apply(a, b);
         //assert
-        Assertions.assertThrows(result, expected);
+        Assertions.assertThrows(expected, result);
     }
 }
